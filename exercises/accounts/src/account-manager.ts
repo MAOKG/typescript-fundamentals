@@ -3,16 +3,11 @@ interface User {
   password: string;
 }
 
-interface ConfirmedUser {
-  email: string;
-  password: string;
+interface ConfirmedUser extends User {
   isActive: boolean;
 }
 
-interface Admin {
-  email: string;
-  password: string;
-  isActive: boolean;
+interface Admin extends ConfirmedUser {
   adminSince: Date;
 }
 
